@@ -22,7 +22,7 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://127.0.0.1:3306/gsdata_dev?useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/gsdata_dev?useSSL=false&useUnicode=true&characterEncoding=utf8
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
@@ -79,7 +79,7 @@ spring:
   datasource:
     username: root
     password: root
-    url: jdbc:mysql://127.0.0.1:3306/gsdata?useSSL=false
+    url: jdbc:mysql://127.0.0.1:3306/gsdata?useSSL=false&useUnicode=true&characterEncoding=utf8
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
