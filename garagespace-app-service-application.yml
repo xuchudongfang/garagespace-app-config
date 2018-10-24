@@ -2,9 +2,7 @@
   profiles:
     active:prod
 ---
-server:
-  port: 8001
-  
+
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml        # mybatis配置文件所在路径
   type-aliases-package: com.garagespace.app.entities    # 所有Entity别名类所在包
@@ -50,7 +48,6 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: garagespace-app-service-8001
     prefer-ip-address: true     #访问路径可以显示IP地址
 
 info:
@@ -58,9 +55,13 @@ info:
   company.name: www.garagespace.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
+
+apache:
+  rocketmq:
+    consumer:
+      PushConsumer: from-back-producer
+    namesrvAddr: 172.20.10.12:9876
 ---
-server:
-  port: 8001
 
 mybatis:
   config-location: classpath:mybatis/mybatis-config.xml        # mybatis配置文件所在路径
@@ -107,7 +108,6 @@ eureka:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
   instance:
-    instance-id: garagespace-app-service-8001
     prefer-ip-address: true     #访问路径可以显示IP地址
 
 info:
@@ -116,6 +116,11 @@ info:
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
+apache:
+  rocketmq:
+    consumer:
+      PushConsumer: from-back-producer
+    namesrvAddr: 172.20.10.12:9876
 
 
 
