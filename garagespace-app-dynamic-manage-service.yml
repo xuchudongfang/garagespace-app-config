@@ -60,7 +60,7 @@ apache:
   rocketmq:
     consumer:
       PushConsumer: from-back-producer
-    namesrvAddr: 172.20.10.12:9876
+    namesrvAddr: 47.107.236.151:9876
 ---
 
 mybatis:
@@ -120,7 +120,7 @@ apache:
   rocketmq:
     consumer:
       PushConsumer: from-back-producer
-    namesrvAddr: 172.20.10.12:9876
+    namesrvAddr: 47.107.236.151:9876
 
 
 
