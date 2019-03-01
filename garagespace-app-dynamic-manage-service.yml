@@ -4,10 +4,10 @@
 ---
 
 mybatis:
-  config-location: classpath:mybatis/mybatis-config.xml        # mybatis配置文件所在路径
-  type-aliases-package: com.garagespace.app.entities    # 所有Entity别名类所在包
+  config-location: classpath:mybatis-config.xml        # mybatis配置文件所在路径
+  type-aliases-package: com.garagespace.api.entities    # 所有Entity别名类所在包
   mapper-locations:
-  - classpath:mybatis/mapper/*.xml                       # mapper映射文件
+  - classpath: mybatis/mapper/*.xml                       # mapper映射文件
 
 feign:
   hystrix:
@@ -64,10 +64,10 @@ apache:
 ---
 
 mybatis:
-  config-location: classpath:mybatis/mybatis-config.xml        # mybatis配置文件所在路径
-  type-aliases-package: com.garagespace.app.entities    # 所有Entity别名类所在包
+  config-location: classpath:mybatis-config.xml        # mybatis配置文件所在路径
+  type-aliases-package: com.garagespace.api.entities    # 所有Entity别名类所在包
   mapper-locations:
-  - classpath:mybatis/mapper/*.xml                       # mapper映射文件
+  - classpath: mybatis/mapper/*.xml                       # mapper映射文件
 
 feign:
   hystrix:
