@@ -8,7 +8,7 @@ spring:
   profiles: dev
   application:
     name: garagespace-app-service
-	
+
 feign:
   hystrix:
     enabled: true
