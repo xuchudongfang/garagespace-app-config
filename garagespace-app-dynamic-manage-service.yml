@@ -131,7 +131,7 @@ apache:
     consumer:
       PushConsumer: from-back-producer
     namesrvAddr: 47.107.236.151:9876
-	
+
 gs:
   rocketmq:
     # namesrvAddr地址
@@ -156,7 +156,3 @@ gs:
     enableHisConsumer: false
     # 启动顺序消费
     enableOrderConsumer: false
-
-
-
-
