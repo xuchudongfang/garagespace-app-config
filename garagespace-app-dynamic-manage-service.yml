@@ -2,17 +2,14 @@
   profiles:
     active:prod
 ---
-
 mybatis:
   config-location: classpath:mybatis-config.xml        # mybatis配置文件所在路径
   type-aliases-package: com.garagespace.api.entities    # 所有Entity别名类所在包
   mapper-locations:
   - classpath:mybatis/mapper/*.xml                       # mapper映射文件
-
 feign:
   hystrix:
     enabled: true
-
 spring:
   profiles: dev
   application:
@@ -40,29 +37,42 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
-
-
-
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://eureka.chekugongzuoshi.com:6001/eureka/,http://eureka.chekugongzuoshi.com:6002/eureka/,http://eureka.chekugongzuoshi.com:6003/eureka/
+      defaultZone: http://eureka-service-6001:6001/eureka/,http://eureka-service-6002:6002/eureka/
   instance:
     prefer-ip-address: true     #访问路径可以显示IP地址
-
 info:
-  app.name: garagespace-app-config
-  company.name: www.garagespace.com
+  app.name: garagespace-app-dynamic-manage-service
+  company.name: www.chekugongzuoshi.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
-
-apache:
+gs:
   rocketmq:
-    consumer:
-      PushConsumer: from-back-producer
+    # namesrvAddr地址
     namesrvAddr: 47.107.236.151:9876
+    # 生产者group名称
+    producerGroupName: from-back-dynamic-producer
+    # 事务生产者group名称
+    transactionProducerGroupName: transactionProducerGroupName
+    # 消费者group名称
+    consumerGroupName: from-back-dynamic-consumer
+    # 生产者实例名称
+    producerInstanceName: producerInstanceName
+    # 消费者实例名称
+    consumerInstanceName: consumerInstanceName
+    # 事务生产者实例名称
+    producerTranInstanceName: producerTranInstanceName
+    # 一次最大消费多少数量消息
+    consumerBatchMaxSize: 1
+    # 广播消费
+    consumerBroadcasting: false
+    # 启动的时候是否消费历史记录
+    enableHisConsumer: false
+    # 启动顺序消费
+    enableOrderConsumer: false
 ---
-
 mybatis:
   config-location: classpath:mybatis-config.xml        # mybatis配置文件所在路径
   type-aliases-package: com.garagespace.api.entities    # 所有Entity别名类所在包
@@ -79,8 +89,8 @@ spring:
     name: garagespace-app-dynamic-manage-service
   datasource:
     username: root
-    password: root
-    url: jdbc:mysql://127.0.0.1:3306/gsdata?useSSL=false&useUnicode=true&characterEncoding=utf8
+    password: abc123ABC
+    url: jdbc:mysql://rm-wz9bvh6a833rihgnz.mysql.rds.aliyuncs.com:3306/gsdata?useSSL=false&useUnicode=true&characterEncoding=utf8
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
@@ -106,13 +116,13 @@ spring:
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
-      defaultZone: http://eureka.chekugongzuoshi.com:6001/eureka/,http://eureka.chekugongzuoshi.com:6002/eureka/,http://eureka.chekugongzuoshi.com:6003/eureka/
+      defaultZone:http://eureka-service-6001:6001/eureka/,http://eureka-service-6002:6002/eureka/
   instance:
     prefer-ip-address: true     #访问路径可以显示IP地址
 
 info:
-  app.name: garagespace-app-config
-  company.name: www.garagespace.com
+  app.name: garagespace-app-dynamic-manage-service
+  company.name: www.chekugongzuoshi.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
 
@@ -121,6 +131,31 @@ apache:
     consumer:
       PushConsumer: from-back-producer
     namesrvAddr: 47.107.236.151:9876
+	
+gs:
+  rocketmq:
+    # namesrvAddr地址
+    namesrvAddr: 47.107.236.151:9876
+    # 生产者group名称
+    producerGroupName: from-back-dynamic-producer
+    # 事务生产者group名称
+    transactionProducerGroupName: transactionProducerGroupName
+    # 消费者group名称
+    consumerGroupName: from-back-dynamic-consumer
+    # 生产者实例名称
+    producerInstanceName: producerInstanceName
+    # 消费者实例名称
+    consumerInstanceName: consumerInstanceName
+    # 事务生产者实例名称
+    producerTranInstanceName: producerTranInstanceName
+    # 一次最大消费多少数量消息
+    consumerBatchMaxSize: 1
+    # 广播消费
+    consumerBroadcasting: false
+    # 启动的时候是否消费历史记录
+    enableHisConsumer: false
+    # 启动顺序消费
+    enableOrderConsumer: false
 
 
 
