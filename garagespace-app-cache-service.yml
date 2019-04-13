@@ -1,0 +1,107 @@
+﻿spring:
+  profiles:
+    active:prod
+---
+feign:
+  hystrix:
+    enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-service-6001:6001/eureka/,http://eureka-service-6002:6002/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:
+  profiles: dev
+  redis:
+    host: 119.23.60.252
+    password: abc123ABC
+
+gs:
+  rocketmq:
+    # namesrvAddr地址
+    namesrvAddr: 47.107.236.151:9876
+    # 生产者group名称
+    producerGroupName: from-back-dynamic-producer
+    # 事务生产者group名称
+    transactionProducerGroupName: transactionProducerGroupName
+    # 消费者group名称
+    consumerGroupName: from-back-dynamic-consumer
+    # 生产者实例名称
+    producerInstanceName: producerInstanceName
+    # 消费者实例名称
+    consumerInstanceName: consumerInstanceName
+    # 事务生产者实例名称
+    producerTranInstanceName: producerTranInstanceName
+    # 一次最大消费多少数量消息
+    consumerBatchMaxSize: 1
+    # 广播消费
+    consumerBroadcasting: false
+    # 启动的时候是否消费历史记录
+    enableHisConsumer: false
+    # 启动顺序消费
+    enableOrderConsumer: false
+
+# Elasticsearch
+# 9200端口是用来让HTTP REST API来访问ElasticSearch，而9300端口是传输层监听的默认端口
+elasticsearch:
+  ip: 114.115.165.69
+  port: 9300
+  pool: 5
+#注意cluster.name需要与config/elasticsearch.yml中的cluster.name一致
+  cluster:
+   name: elasticsearch
+---
+feign:
+  hystrix:
+    enabled: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-service-6001:6001/eureka/,http://eureka-service-6002:6002/eureka/
+  instance:
+    prefer-ip-address: true
+
+spring:
+  profiles: prod
+  redis:
+    host: r-wz9mq6jq80wiskiaqu.redis.rds.aliyuncs.com
+    password: 881113abcABC
+
+gs:
+  rocketmq:
+    # namesrvAddr地址
+    namesrvAddr: 47.107.236.151:9876
+    # 生产者group名称
+    producerGroupName: from-back-dynamic-producer
+    # 事务生产者group名称
+    transactionProducerGroupName: transactionProducerGroupName
+    # 消费者group名称
+    consumerGroupName: from-back-dynamic-consumer
+    # 生产者实例名称
+    producerInstanceName: producerInstanceName
+    # 消费者实例名称
+    consumerInstanceName: consumerInstanceName
+    # 事务生产者实例名称
+    producerTranInstanceName: producerTranInstanceName
+    # 一次最大消费多少数量消息
+    consumerBatchMaxSize: 1
+    # 广播消费
+    consumerBroadcasting: false
+    # 启动的时候是否消费历史记录
+    enableHisConsumer: false
+    # 启动顺序消费
+    enableOrderConsumer: false
+
+# Elasticsearch
+# 9200端口是用来让HTTP REST API来访问ElasticSearch，而9300端口是传输层监听的默认端口
+elasticsearch:
+  ip: 114.115.165.69
+  port: 9300
+  pool: 5
+#注意cluster.name需要与config/elasticsearch.yml中的cluster.name一致
+  cluster:
+   name: elasticsearch
