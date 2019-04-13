@@ -110,9 +110,6 @@ spring:
     maxPoolPreparedStatementPerConnectionSize: 20
     useGlobalDataSourceStat: true
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
-
-
-
 eureka:
   client: #客户端注册进eureka服务列表内
     service-url:
@@ -125,13 +122,11 @@ info:
   company.name: www.chekugongzuoshi.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
-
 apache:
   rocketmq:
     consumer:
       PushConsumer: from-back-producer
     namesrvAddr: 47.107.236.151:9876
-
 gs:
   rocketmq:
     # namesrvAddr地址
