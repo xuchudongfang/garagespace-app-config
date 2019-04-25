@@ -1,6 +1,6 @@
 ﻿spring:
   profiles:
-    active:prod
+    active: prod
 ---
 mybatis:
   config-location: classpath:mybatis-config.xml        # mybatis配置文件所在路径
@@ -122,11 +122,7 @@ info:
   company.name: www.chekugongzuoshi.com
   build.artifactId: $project.artifactId$
   build.version: $project.version$
-apache:
-  rocketmq:
-    consumer:
-      PushConsumer: from-back-producer
-    namesrvAddr: 47.107.236.151:9876
+  
 gs:
   rocketmq:
     # namesrvAddr地址
