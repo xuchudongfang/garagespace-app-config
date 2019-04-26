@@ -16,7 +16,7 @@ eureka:
 spring:
   profiles: dev
   redis:
-    host: 119.23.60.252
+    host: 47.107.236.151
     password: abc123ABC
 
 gs:
