@@ -20,6 +20,7 @@ spring:
     password: abc123ABC
 zookeeper:
   addr: 47.107.173.35:32181
+  timeout: 5000
 gs:
   rocketmq:
     accessKey: LTAISk9ljIMoAwg4
@@ -65,6 +66,7 @@ spring:
     password: 881113abcABC
 zookeeper:
   addr: zookeeper:2181
+  timeout: 5000
 gs:
   rocketmq:
     accessKey: LTAISk9ljIMoAwg4
