@@ -21,20 +21,12 @@ spring:
 
 gs:
   rocketmq:
+    accessKey: LTAISk9ljIMoAwg4
+    secretKey: toWpFJorcB8j86AkoBK0NQDCj4NOWm
     # namesrvAddr地址
-    namesrvAddr: 47.107.236.151:9876
-    # 生产者group名称
-    producerGroupName: from-back-dynamic-producer
-    # 事务生产者group名称
-    transactionProducerGroupName: transactionProducerGroupName
-    # 消费者group名称
-    consumerGroupName: from-back-dynamic-consumer
-    # 生产者实例名称
-    producerInstanceName: producerInstanceName
-    # 消费者实例名称
-    consumerInstanceName: consumerInstanceName
-    # 事务生产者实例名称
-    producerTranInstanceName: producerTranInstanceName
+    namesrvAddr: http://MQ_INST_1518141642160924_BanExLH4.mq-internet-access.mq-internet.aliyuncs.com:80  #47.107.236.151:9876
+    # 事务生产者group名称(服务dynamic)
+    dynamicGroupName: GID_Dynamic_App_Group_Name_Dev
     # 一次最大消费多少数量消息
     consumerBatchMaxSize: 1
     # 广播消费
@@ -73,20 +65,12 @@ spring:
 
 gs:
   rocketmq:
+    accessKey: LTAISk9ljIMoAwg4
+    secretKey: toWpFJorcB8j86AkoBK0NQDCj4NOWm
     # namesrvAddr地址
-    namesrvAddr: 47.107.236.151:9876
-    # 生产者group名称
-    producerGroupName: from-back-dynamic-producer
-    # 事务生产者group名称
-    transactionProducerGroupName: transactionProducerGroupName
-    # 消费者group名称
-    consumerGroupName: from-back-dynamic-consumer
-    # 生产者实例名称
-    producerInstanceName: producerInstanceName
-    # 消费者实例名称
-    consumerInstanceName: consumerInstanceName
-    # 事务生产者实例名称
-    producerTranInstanceName: producerTranInstanceName
+    namesrvAddr: http://MQ_INST_1518141642160924_BanExLH4.mq-internet-access.mq-internet.aliyuncs.com:80  #47.107.236.151:9876
+    # 事务生产者group名称(服务dynamic)
+    dynamicGroupName: GID_Dynamic_App_Group_Name_Prod
     # 一次最大消费多少数量消息
     consumerBatchMaxSize: 1
     # 广播消费
