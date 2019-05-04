@@ -18,10 +18,8 @@ spring:
   redis:
     host: 47.107.236.151
     password: abc123ABC
-	
 zookeeper:
   addr: 47.107.173.35:32181
-
 gs:
   rocketmq:
     accessKey: LTAISk9ljIMoAwg4
@@ -65,10 +63,8 @@ spring:
   redis:
     host: r-wz9mq6jq80wiskiaqu.redis.rds.aliyuncs.com
     password: 881113abcABC
-
 zookeeper:
   addr: zookeeper:2181
-
 gs:
   rocketmq:
     accessKey: LTAISk9ljIMoAwg4
