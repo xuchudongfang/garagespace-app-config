@@ -82,7 +82,7 @@ spring:
   datasource:
     username: root
     password: abc123ABC
-    url: jdbc:mysql://rm-wz9bvh6a833rihgnz.mysql.rds.aliyuncs.com:3306/gsdata?useSSL=false&useUnicode=true&characterEncoding=utf8
+    url: jdbc:mysql://rm-wz9bvh6a833rihgnz5o.mysql.rds.aliyuncs.com:3306/gsdata?useSSL=false&useUnicode=true&characterEncoding=utf8
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
