@@ -1,6 +1,6 @@
 ﻿spring:
   profiles:
-    active:prod
+    active: prod
 ---
 feign:
   hystrix:
@@ -63,9 +63,7 @@ spring:
   profiles: prod
   redis:
     host: 47.107.236.151
-	password: abc123ABC
-    #host: r-wz9mq6jq80wiskiaqu.redis.rds.aliyuncs.com
-    #password: 881113abcABC
+    password: abc123ABC
 zookeeper:
   addr: zookeeper:2181
   timeout: 5000
