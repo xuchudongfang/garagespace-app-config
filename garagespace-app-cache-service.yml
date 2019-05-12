@@ -55,15 +55,17 @@ feign:
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-service-6001:6001/eureka/,http://eureka-service-6002:6002/eureka/
+      defaultZone: http://182.61.57.172:30601/eureka/,http://182.61.57.172:30602/eureka/
   instance:
     prefer-ip-address: true
 
 spring:
   profiles: prod
   redis:
-    host: r-wz9mq6jq80wiskiaqu.redis.rds.aliyuncs.com
-    password: 881113abcABC
+    host: 47.107.236.151
+	password: abc123ABC
+    #host: r-wz9mq6jq80wiskiaqu.redis.rds.aliyuncs.com
+    #password: 881113abcABC
 zookeeper:
   addr: zookeeper:2181
   timeout: 5000
