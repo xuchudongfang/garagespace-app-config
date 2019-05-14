@@ -65,7 +65,7 @@ spring:
     host: 47.107.236.151
     password: abc123ABC
 zookeeper:
-  addr: zookeeper:2181
+  addr: 106.13.39.248:32181
   timeout: 5000
 gs:
   rocketmq:
